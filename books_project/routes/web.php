@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WriterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +43,22 @@ Route::delete('/i/{id}',[BookController::class,'destroy'])->name('cmc.destroy');
 
 
 // Route::resource('/books',BookController::class);
+//---------------------------------------------------------------------------------
+ Route::view('/w','Writer.parentwriter');
+
+ Route::get('/w/index',[ WriterController::class , 'index'])->name('writer.index');
+ Route::get('/w/show/{id}',[ WriterController::class , 'show'])->name('writer.show');
+
+ Route::get('/w/create',[ WriterController::class , 'create'])->name('writer.create');
+ Route::post('/w/store',[ WriterController::class , 'store'])->name('writer.store');
+ 
+ Route::get('/w/{id?}/edit',[WriterController::class,'edit'])->name('writer.edit');
+ Route::put('/w/edite/{id}',[WriterController::class,'update'])->name('writer.update');
+
+
+Route::delete('/w/{id}',[BookController::class,'destroy'])->name('writer.destroy');
+
+
 
 
 

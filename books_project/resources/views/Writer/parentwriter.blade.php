@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
 scratch. This page gets rid of all links and provides the needed markup only.
@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Add | Books</title>
+  <title>Add | Writer</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet"
@@ -194,48 +194,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
         </div>
 
-        <!-- Sidebar Menu -->
+        <!-- Sidebar Menu writer -->
         <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                
-                <i class="fas fa-barcode"></i>
-               
-                
-
-                <p>
-
-                  Books
-                  
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{route('cmc.create')}}" class="nav-link">
-                    <i class="fas fa-plus-square"></i>
-                    <p>New Book</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{route('cmc.index')}}" class="nav-link">
-                    <i class="far fa-list"></i>
-                    <p>All Book</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-
-        
-        
-        <!-- /.sidebar-menu -->
-         <!-- Sidebar Menu writer -->
-         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -271,9 +231,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
-        
       </div>
-      
       <!-- /.sidebar -->
     </aside>
 
@@ -284,12 +242,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Add Books</h1>
+              <h1 class="m-0">Add writer</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Add Books</li>
+                <li class="breadcrumb-item active">Add Writer</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -299,7 +257,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Main content -->
       {{-- @yield('content') --}}
-@yield('content')
+{{-- @yield('content')
       <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
@@ -336,4 +294,4 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <script src="{{asset('cmc/dist/js/adminlte.min.js')}}"></script>
 </body>
 
-</html>
+</html> --}} --}}
