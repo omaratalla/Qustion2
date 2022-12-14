@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PubllisherController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\UserController;
@@ -43,20 +44,34 @@ Route::delete('/i/{id}',[BookController::class,'destroy'])->name('cmc.destroy');
 
 
 // Route::resource('/books',BookController::class);
-//---------------------------------------------------------------------------------
- Route::view('/w','Writer.parentwriter');
+//------(WRITER)---------------------------------------------------------------------------
 
- Route::get('/w/index',[ WriterController::class , 'index'])->name('writer.index');
- Route::get('/w/show/{id}',[ WriterController::class , 'show'])->name('writer.show');
+ Route::get('/w/index',[ WriterController::class , 'index'])->name('wcw.index');
+ Route::get('/w/show/{id}',[ WriterController::class , 'show'])->name('wcw.show');
 
- Route::get('/w/create',[ WriterController::class , 'create'])->name('writer.create');
- Route::post('/w/store',[ WriterController::class , 'store'])->name('writer.store');
+ Route::get('/w/create',[ WriterController::class , 'create'])->name('wcw.create');
+ Route::post('/w/store',[ WriterController::class , 'store'])->name('wcw.store');
  
- Route::get('/w/{id?}/edit',[WriterController::class,'edit'])->name('writer.edit');
- Route::put('/w/edite/{id}',[WriterController::class,'update'])->name('writer.update');
+ Route::get('/w/{id?}/edit',[WriterController::class,'edit'])->name('wcw.edit');
+ Route::put('/w/edite/{id}',[WriterController::class,'update'])->name('wcw.update');
 
 
-Route::delete('/w/{id}',[BookController::class,'destroy'])->name('writer.destroy');
+Route::delete('/w/{id}',[WriterController::class,'destroy'])->name('wcw.destroy');
+
+
+//------(Publlisher)---------------------------------------------------------------------------
+
+Route::get('/p/index',[ PubllisherController::class , 'index'])->name('pcp.index');
+Route::get('/p/show/{id}',[ PubllisherController::class , 'show'])->name('pcp.show');
+
+Route::get('/p/create',[ PubllisherController::class , 'create'])->name('pcp.create');
+Route::post('/p/store',[ PubllisherController::class , 'store'])->name('pcp.store');
+
+Route::get('/p/{id?}/edit',[PubllisherController::class,'edit'])->name('pcp.edit');
+Route::put('/p/edite/{id}',[PubllisherController::class,'update'])->name('pcp.update');
+
+Route::delete('/p/{id}',[PubllisherController::class,'destroy'])->name('pcp.destroy');
+
 
 
 

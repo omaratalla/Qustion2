@@ -32,7 +32,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Writer</th>
+                                    <th>Publlisher</th>
                                     <th>Action</th>
                                     
                                    
@@ -40,16 +40,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($writer as $item )
+                                @foreach ($publlisher as $item )
                                     <tr>
                                         <td>{{ $item->id}}</td>    
-                                        <td>{{ $item->Writer}}</td>
+                                        <td>{{ $item->Publlisher}}</td>
 
                                         <td class="options">
-                                             <a href="{{route('writer.edit',$item->id)}}">Edit</a>
+                                             <a href="{{route('pcp.edit',$item->id)}}">Edit</a>
                                              {{-- <a href="{{route('cmc.destroy',$item->id)}}" style="color:red "> | Delete</a> --}}
 
-                                             <form action="{{route('writer.destroy',$item->id)}}" method="POST">
+                                             <form action="{{route('pcp.destroy',$item->id)}}" method="POST">
                                             @method('DELETE')
                                             @csrf
                                             <button type="submit" class="delete-btn"  >Delete</button>

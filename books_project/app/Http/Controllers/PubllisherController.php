@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Writer;
+use App\Models\Publlisher;
 use Illuminate\Http\Request;
 
-class WriterController extends Controller
+class PubllisherController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class WriterController extends Controller
     public function index()
     {
         //
-        $data = Writer::all();
-        return response()->view('wcw.index' , ['writer' => $data]);
+                $data = Publlisher::all();
+        return response()->view('pcp.index' , ['publlisher' => $data]);
 
     }
 
@@ -28,7 +28,8 @@ class WriterController extends Controller
     public function create()
     {
         //
-        return response()->view('wcw.create' );
+     return response()->view('pcp.create' );
+
     }
 
     /**
@@ -40,24 +41,24 @@ class WriterController extends Controller
     public function store(Request $request)
     {
         //
-        $request->validate([
-            'Writer'=>'required|string',
+         $request->validate([
+            'Publlisher'=>'required|string',
         ]);
 
 
-        $writer= new Writer();
-        $writer->Writer=$request->input('Writer'); 
-        $save = $writer->save();
+        $publlisher= new Publlisher();
+        $publlisher->Publlisher=$request->input('Publlisher'); 
+        $save = $publlisher->save();
         return redirect()->back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Writer  $writer
+     * @param  \App\Models\Publlisher  $publlisher
      * @return \Illuminate\Http\Response
      */
-    public function show(Writer $writer)
+    public function show(Publlisher $publlisher)
     {
         //
     }
@@ -65,15 +66,14 @@ class WriterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Writer  $writer
+     * @param  \App\Models\Publlisher  $publlisher
      * @return \Illuminate\Http\Response
      */
     public function edit( $id)
     {
         //
-        $writer=Writer::find($id);
-        return response()->view('wcw.edit',['writer'=>$writer]);
-
+                $publlisher=Publlisher::find($id);
+        return response()->view('pcp.edit',['publlisher'=>$publlisher]);
 
     }
 
@@ -81,41 +81,43 @@ class WriterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Writer  $writer
+     * @param  \App\Models\Publlisher  $publlisher
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request,  $id)
     {
         //
-        $request->validate([
+                $request->validate([
            
-            'Writer'=>'required|string ',
+            'Publlisher'=>'required|string ',
             
         ]);
 
-        $writer =Writer::findOrFail($id);
+        $publlisher =Publlisher::findOrFail($id);
        
-        $writer->Writer = $request->input('Writer');
+        $publlisher->Publlisher = $request->input('Publlisher');
        
       
    
-        $save = $writer->save();
-        return redirect()->route('wcw.index');
+        $save = $publlisher->save();
+        return redirect()->route('pcp.index');
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Writer  $writer
+     * @param  \App\Models\Publlisher  $publlisher
      * @return \Illuminate\Http\Response
      */
     public function destroy( $id)
     {
         //
-        $writer=Writer::findOrFail(   $id);
-        $deleted=$writer->delete();
+         $publlisher=Publlisher::findOrFail(   $id);
+        $deleted=$publlisher->delete();
         if($deleted){
             return redirect()->back();
         }
+
     }
 }

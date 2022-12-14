@@ -255,13 +255,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{route('writer.create')}}" class="nav-link">
+                  <a href="{{route('wcw.create')}}" class="nav-link">
                     <i class="fas fa-plus-square"></i>
                     <p> Writer</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{route('writer.index')}}" class="nav-link">
+                  <a href="{{route('wcw.index')}}" class="nav-link">
                     <i class="far fa-list"></i>
                     <p>All Writer</p>
                   </a>
@@ -272,6 +272,43 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </nav>
         <!-- /.sidebar-menu -->
         
+             <!-- Sidebar Menu publlisher -->
+             <nav class="mt-2">
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                   with font-awesome or any other icon font library -->
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    
+                    <i class="fas fa-barcode"></i>
+                   
+                    
+    
+                    <p>
+    
+                      Publlisher
+                      
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="{{route('pcp.create')}}" class="nav-link">
+                        <i class="fas fa-plus-square"></i>
+                        <p> Publlisher</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{route('pcp.index')}}" class="nav-link">
+                        <i class="far fa-list"></i>
+                        <p>All Publlisher</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
       </div>
       
       <!-- /.sidebar -->

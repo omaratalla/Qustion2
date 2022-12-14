@@ -9,11 +9,12 @@
                 <!-- general form elements -->
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Add Writer</h3>
+                        <h3 class="card-title">Edit</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form method="POST"  action="{{route('writer.store')}}">
+                    <form method="POST"  action="{{route('pcp.update' , $publlisher->id )}}">
+                        @method('PUT')
                         @csrf
                    
                         <div class="card-body">
@@ -29,13 +30,13 @@
 
                         </div>
                            @endif 
-                         
-                            <div class="form-group">
-                                <label for="Writer">Writer</label>
-                                <input type="text" class="form-control" id="Writer" name="Writer" value="{{old('Writer')}}"
-                                    placeholder="Enter  Writer">
-                            </div>
                             
+                            <div class="form-group">
+                                <label for="Publlisher">Publlisher</label>
+                                <input type="text" class="form-control" id="Publlisher" name="Publlisher" value="{{old('Publlisher') ?? $publlisher->Publlisher}}"
+                                    placeholder="Enter  Publlisher">
+                            </div>
+                           
                         
                         <!-- /.card-body -->
 

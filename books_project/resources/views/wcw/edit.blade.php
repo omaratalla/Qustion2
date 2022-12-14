@@ -13,7 +13,7 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form method="POST"  action="{{route('writer.update' , $book->id )}}">
+                    <form method="POST"  action="{{route('wcw.update' , $writer->id )}}">
                         @method('PUT')
                         @csrf
                    
@@ -32,7 +32,7 @@
                            @endif 
                             
                             <div class="form-group">
-                                <label for="Writer">Writer</label>
+                                <label for="Writer">NameWriter</label>
                                 <input type="text" class="form-control" id="Writer" name="Writer" value="{{old('Writer') ?? $writer->Writer}}"
                                     placeholder="Enter  Writer">
                             </div>
