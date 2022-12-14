@@ -28,7 +28,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('cmc.index');
 // });
 
-Route::view('/','cmc.parent');
+Route::view('/','cmc.parent')->name('cmc.parent');
+Route::view('/cmc/starter','cmc.login')->name('cmc.login');
+
 // Route::view('/i/index','cmc.index')->name('cmc.index');
 
 Route::get('/i/index',[ BookController::class , 'index'])->name('cmc.index');
