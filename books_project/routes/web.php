@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CatogryController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PubllisherController;
 use App\Http\Controllers\StudentController;
@@ -72,7 +73,18 @@ Route::put('/p/edite/{id}',[PubllisherController::class,'update'])->name('pcp.up
 
 Route::delete('/p/{id}',[PubllisherController::class,'destroy'])->name('pcp.destroy');
 
+//------(Ctogry)---------------------------------------------------------------------------
 
+Route::get('/c/index',[ CatogryController::class , 'index'])->name('cat.index');
+Route::get('/c/show/{id}',[ CatogryController::class , 'show'])->name('cat.show');
+
+Route::get('/c/create',[ CatogryController::class , 'create'])->name('cat.create');
+Route::post('/c/store',[ CatogryController::class , 'store'])->name('cat.store');
+
+Route::get('/c/{id?}/edit',[CatogryController::class,'edit'])->name('cat.edit');
+Route::put('/c/edite/{id}',[CatogryController::class,'update'])->name('cat.update');
+
+Route::delete('/c/{id}',[CatogryController::class,'destroy'])->name('cat.destroy');
 
 
 

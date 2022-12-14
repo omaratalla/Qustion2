@@ -309,6 +309,44 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </ul>
             </nav>
             <!-- /.sidebar-menu -->
+
+            <!-- Sidebar Menu catogry -->
+         <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                
+                <i class="fas fa-barcode"></i>
+               
+                
+
+                <p>
+
+                  Category
+                  
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{route('cat.create')}}" class="nav-link">
+                    <i class="fas fa-plus-square"></i>
+                    <p> Category</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{route('cat.index')}}" class="nav-link">
+                    <i class="far fa-list"></i>
+                    <p>All Category</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
       </div>
       
       <!-- /.sidebar -->
